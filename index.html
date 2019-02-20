@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- font awesome icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <!-- include css -->
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <!-- title of the app -->
+    <title>TaskSky</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- header -->
+        <header class="header" role="banner">
+            <div class="header__logo">
+                <a href="/" aria-label="Logo Brand">TaskSky</a>
+            </div>
+            <div class="header__nav-container">
+                <!-- topbar navigation -->
+                <nav class="nav__topbar-nav" aria-labelledby="topbar-nav" id="topbar-nav" role="navigation">
+                    <div class="topbar-nav__panel--search">
+                        <form class="form__search" method="get" action="/search">
+                            <label>
+                                <i class="form__search-icon" class="fas fa-search" aria-hidden="true"></i>
+                                <input class="form__search-input" aria-label="search for tasks" name="search" placeholder="Search for tasks..." />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="topbar-nav__panel--notif">
+                        <button type="button" aria-label="see notifications">
+                            <i class="far fa-bell" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="topbar-nav__panel--user">
+                        <div>M. Thompson</div>
+                        <button type="button" aria-label="go to my account">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </nav>
+                <!-- sidebar navigation -->
+                <nav aria-labelledby="sidebar-nav" role="navigation">
+                    <div class="sidebar-nav__menu-mobile" aria-label="open menu on mobile">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <ul id="sidebar-nav">
+                        <li class="sidebar-nav__item">
+                            <a class="sidebar-nav__link" href="/manage" aria-label="go to manage section">
+                                <i class="fas fa-user-friends" aria-hidden="true"></i>
+                                Manage
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item">
+                            <a class="sidebar-nav__link" href="/tasks" aria-label="go to tasks section">
+                                <i class="fas fa-tasks" aria-hidden="true"></i>
+                                Tasks
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item">
+                            <a class="sidebar-nav__link" href="/schedule" aria-label="go to schedule section">
+                                <i class="fas fa-calendar-week" aria-hidden="true"></i>
+                                Schedule
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item">
+                            <a class="sidebar-nav__link" href="/reports" aria-label="go to reports section">
+                                <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                                Reports
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item">
+                            <a class="sidebar-nav__link" href="/settings" aria-label="go to settings section">
+                                <i class="fas fa-cog" aria-hidden="true"></i>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- main doc -->
+        <main class="main__tasks" role="main">
+            <h1>Tasks</h1>
+            <!-- first card :: Backglog -->
+            <article class="card__item color-primary">
+                <h2>Backlog</h2>
+                <section class="task__item">
+                    <span class="task__badge color-primary">Priority</span>
+                    <h3>Company website redesign.</h3>
+                    <footer class="task__footer">
+                        <div class="task__footer__comments" aria-label="comments counter">
+                            <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                            <span class="counter">1</span>
+                        </div>
+                        <div class="task__footer__attachment" aria-label="attached files counter">
+                            <i class="fas fa-paperclip" aria-hidden="true"></i>
+                            <span class="counter">2</span>
+                        </div>
+                        <div class="task__footer__user color-primary" aria-label="icon user task">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                        </div>
+                    </footer>
+                </section>
+                <button class="card__item--addtask" type="button" aria-label="add backlogged task">
+                    Add task
+                    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </article>
+            <!-- second card :: In progress -->
+            <article class="card__item color-secondary">
+                <h2>In Progress</h2>
+                <section class="task__item">
+                    <span class="task__badge color-secondary">Priority</span>
+                    <h3>Company website redesign.</h3>
+                    <footer class="task__footer">
+                        <div class="task__footer__comments" aria-label="comments counter">
+                            <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                            <span class="counter">3</span>
+                        </div>
+                        <div class="task__footer__attachment" aria-label="attached files counter">
+                            <i class="fas fa-paperclip" aria-hidden="true"></i>
+                            <span class="counter">2</span>
+                        </div>
+                        <div class="task__footer__user color-secondary" aria-label="icon user task">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                        </div>
+                    </footer>
+                </section>
+                <button class="card__item--addtask" type="button" aria-label="add in-progress task">
+                    Add task
+                    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </article>
+            <!-- third card :: Review -->
+            <article class="card__item color-tertiary">
+                <h2>Review</h2>
+                <section class="task__item">
+                    <span class="task__badge color-tertiary">Priority</span>
+                    <h3>Company website redesign.</h3>
+                    <footer class="task__footer">
+                        <div class="task__footer__comments" aria-label="comments counter">
+                            <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                            <span class="counter">2</span>
+                        </div>
+                        <div class="task__footer__attachment" aria-label="attached files counter">
+                            <i class="fas fa-paperclip" aria-hidden="true"></i>
+                            <span class="counter">2</span>
+                        </div>
+                        <div class="task__footer__user color-tertiary" aria-label="icon user task">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                        </div>
+                    </footer>
+                </section>
+                <button class="card__item--addtask" type="button" aria-label="add reviewed task">
+                    Add task
+                    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </article>
+            <!-- fourth card :: Complete -->
+            <article class="card__item color-quaternary">
+                <h2>Complete</h2>
+                <section class="task__item">
+                    <span class="task__badge color-quaternary">Priority</span>
+                    <h3>Company website redesign.</h3>
+                    <footer class="task__footer">
+                        <div class="task__footer__comments" aria-label="comments counter">
+                            <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                            <span class="counter">1</span>
+                        </div>
+                        <div class="task__footer__attachment" aria-label="attached files counter">
+                            <i class="fas fa-paperclip" aria-hidden="true"></i>
+                            <span class="counter">3</span>
+                        </div>
+                        <div class="task__footer__user color-quaternary" aria-label="icon user task">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                        </div>
+                    </footer>
+                </section>
+                <button class="card__item--addtask" type="button" aria-label="add complete task">
+                    Add task
+                    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </article>
+            <button class="main__addcard" type="button" aria-label="add card for task">
+                <i class="fas fa-plus-circle" aria-hidden="true"></i>
+            </button>
+        </main>
+    </div>
+</body>
+
+</html>
