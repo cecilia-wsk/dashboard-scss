@@ -4,10 +4,10 @@
   -moz-box-shadow: $value;
   box-shadow: $value;
 }
-@mixin border-radius($value){
-  -moz-border-radius: $value;
-  -webkit--radius: $value;
-  border-radius: $value;
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
 }
 @mixin linear-gradient($angle, $gradient1, $gradient2) {
   background-color: $gradient2; 
