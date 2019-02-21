@@ -1,0 +1,64 @@
+// Gradient 
+.gradient-primary {
+	@include linear-gradient(left, #ca7eeb, #df7690);
+}
+.gradient-secondary {
+	@include linear-gradient(left, #ff9884, #ffb74f);
+}
+.gradient-tertiary {
+	@include linear-gradient(left, #9da7fb, #6eb4f8);
+}
+.gradient-quaternary {
+	@include linear-gradient(left, #7ed4aa, #81d5ed);
+}
+// Flex state
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+// Color-state
+.icon--white {
+	color: white;
+}
+// Logo
+.header__logo {
+	letter-spacing: .5px;
+	font-size: 1em;
+}
+// Hidden on mobile
+.topbar-nav__username,
+.form__search-input {
+	display: none;
+}
+// Topbar navigation panel
+.topbar-nav__panel {
+    padding: 1em;
+}
+.topbar-nav__panel--notif {
+	position: relative;
+	border-left: 1px solid #a2c2fa;
+	border-right: 1px solid #a2c2fa;
+}
+.topbar-nav__panel--notif::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #a1ffff;
+    top: 15%;
+    right: 20%;
+}
+// Usericon
+.topbar-nav__usericon {
+    background: #9b9b9b;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 50%;
+}
+// Main title
+.main__title {
+	font-weight: $regular;
+}

@@ -8,7 +8,7 @@
     <!-- font awesome icons -->
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <!-- include css -->
-    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/main.min.css?v=1.0">
     <!-- title of the app -->
     <title>TaskSky</title>
 </head>
@@ -17,38 +17,38 @@
     <div class="app-container">
         <!-- header -->
         <header class="header" role="banner">
-            <div class="header__logo">
-                <a href="/" aria-label="Logo Brand">TaskSky</a>
+            <div class="header__logo-container flex">
+                <div class="sidebar-nav__menu-mobile" aria-label="open menu on mobile">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </div>
+                <a class="header__logo" href="#" aria-label="Logo Brand">TaskSky</a>
             </div>
             <div class="header__nav-container">
                 <!-- topbar navigation -->
-                <nav class="nav__topbar-nav" aria-labelledby="topbar-nav" id="topbar-nav" role="navigation">
-                    <div class="topbar-nav__panel--search">
+                <nav class="nav__topbar-nav gradient-tertiary" aria-labelledby="topbar-nav" id="topbar-nav" role="navigation">
+                    <div class="topbar-nav__panel flex topbar-nav__panel--search">
                         <form class="form__search" method="get" action="/search">
-                            <label>
-                                <i class="form__search-icon" class="fas fa-search" aria-hidden="true"></i>
-                                <input class="form__search-input" aria-label="search for tasks" name="search" placeholder="Search for tasks..." />
+                            <label class="icon--white">
+                                <i class="form__search-icon fas fa-search" aria-hidden="true"></i>
+                                <input type="search" class="form__search-input" aria-label="search for tasks" name="search" placeholder="Search for tasks..." />
                             </label>
                         </form>
                     </div>
-                    <div class="topbar-nav__panel--notif">
-                        <button type="button" aria-label="see notifications">
-                            <i class="far fa-bell" aria-hidden="true"></i>
+                    <div class="topbar-nav__panel flex topbar-nav__panel--notif">
+                        <button class="icon--white" type="button" aria-label="see notifications">
+                            <i class="fas fa-bell" aria-hidden="true"></i>
                         </button>
                     </div>
-                    <div class="topbar-nav__panel--user">
-                        <div>M. Thompson</div>
-                        <button type="button" aria-label="go to my account">
+                    <div class="topbar-nav__panel flex topbar-nav__panel--user">
+                        <div class="topbar-nav__username">M. Thompson</div>
+                        <button class="topbar-nav__usericon icon--white" type="button" aria-label="go to my account">
                             <i class="fas fa-user" aria-hidden="true"></i>
                         </button>
                     </div>
                 </nav>
                 <!-- sidebar navigation -->
-                <nav aria-labelledby="sidebar-nav" role="navigation">
-                    <div class="sidebar-nav__menu-mobile" aria-label="open menu on mobile">
-                        <i class="fas fa-bars" aria-hidden="true"></i>
-                    </div>
-                    <ul id="sidebar-nav">
+                <nav aria-labelledby="sidebar-nav" id="sidebar-nav" role="navigation">
+                    <ul class="sidebar-nav__menu-desktop">
                         <li class="sidebar-nav__item">
                             <a class="sidebar-nav__link" href="/manage" aria-label="go to manage section">
                                 <i class="fas fa-user-friends" aria-hidden="true"></i>
@@ -85,12 +85,13 @@
         </header>
         <!-- main doc -->
         <main class="main__tasks" role="main">
-            <h1>Tasks</h1>
+            <h1 class="main__title">Tasks</h1>
             <!-- first card :: Backglog -->
-            <article class="card__item color-primary">
+            <article class="card__item">
+                <div class="card__item-border-top gradient-primary"></div>
                 <h2>Backlog</h2>
                 <section class="task__item">
-                    <span class="task__badge color-primary">Priority</span>
+                    <span class="task__badge gradient-primary">Priority</span>
                     <h3>Company website redesign.</h3>
                     <footer class="task__footer">
                         <div class="task__footer__comments" aria-label="comments counter">
@@ -101,7 +102,7 @@
                             <i class="fas fa-paperclip" aria-hidden="true"></i>
                             <span class="counter">2</span>
                         </div>
-                        <div class="task__footer__user color-primary" aria-label="icon user task">
+                        <div class="task__footer__user gradient-primary" aria-label="icon user task">
                             <i class="fas fa-user" aria-hidden="true"></i>
                         </div>
                     </footer>
@@ -112,10 +113,11 @@
                 </button>
             </article>
             <!-- second card :: In progress -->
-            <article class="card__item color-secondary">
+            <article class="card__item">
+                <div class="card__item-border-top gradient-secondary"></div>
                 <h2>In Progress</h2>
                 <section class="task__item">
-                    <span class="task__badge color-secondary">Priority</span>
+                    <span class="task__badge gradient-secondary">Priority</span>
                     <h3>Company website redesign.</h3>
                     <footer class="task__footer">
                         <div class="task__footer__comments" aria-label="comments counter">
@@ -126,7 +128,7 @@
                             <i class="fas fa-paperclip" aria-hidden="true"></i>
                             <span class="counter">2</span>
                         </div>
-                        <div class="task__footer__user color-secondary" aria-label="icon user task">
+                        <div class="task__footer__user gradient-secondary" aria-label="icon user task">
                             <i class="fas fa-user" aria-hidden="true"></i>
                         </div>
                     </footer>
@@ -137,10 +139,11 @@
                 </button>
             </article>
             <!-- third card :: Review -->
-            <article class="card__item color-tertiary">
+            <article class="card__item">
+                <div class="card__item-border-top gradient-tertiary"></div>
                 <h2>Review</h2>
                 <section class="task__item">
-                    <span class="task__badge color-tertiary">Priority</span>
+                    <span class="task__badge gradient-tertiary">Priority</span>
                     <h3>Company website redesign.</h3>
                     <footer class="task__footer">
                         <div class="task__footer__comments" aria-label="comments counter">
@@ -151,7 +154,7 @@
                             <i class="fas fa-paperclip" aria-hidden="true"></i>
                             <span class="counter">2</span>
                         </div>
-                        <div class="task__footer__user color-tertiary" aria-label="icon user task">
+                        <div class="task__footer__user gradient-tertiary" aria-label="icon user task">
                             <i class="fas fa-user" aria-hidden="true"></i>
                         </div>
                     </footer>
@@ -162,10 +165,11 @@
                 </button>
             </article>
             <!-- fourth card :: Complete -->
-            <article class="card__item color-quaternary">
+            <article class="card__item">
+                <div class="card__item-border-top gradient-quaternary"></div>
                 <h2>Complete</h2>
                 <section class="task__item">
-                    <span class="task__badge color-quaternary">Priority</span>
+                    <span class="task__badge gradient-quaternary">Priority</span>
                     <h3>Company website redesign.</h3>
                     <footer class="task__footer">
                         <div class="task__footer__comments" aria-label="comments counter">
@@ -176,7 +180,7 @@
                             <i class="fas fa-paperclip" aria-hidden="true"></i>
                             <span class="counter">3</span>
                         </div>
-                        <div class="task__footer__user color-quaternary" aria-label="icon user task">
+                        <div class="task__footer__user gradient-quaternary" aria-label="icon user task">
                             <i class="fas fa-user" aria-hidden="true"></i>
                         </div>
                     </footer>

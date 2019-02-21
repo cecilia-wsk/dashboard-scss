@@ -1,0 +1,19 @@
+// Sidebar navigation
+.sidebar-nav__menu-desktop {
+	display: none;
+}
+// Menu mobile 
+.sidebar-nav__menu-mobile {
+	padding-right: .5em;
+}
+// Header > logo
+.header__logo-container {
+	background: $background-logo;
+	color: white;
+}
+// Topbar navigation
+.nav__topbar-nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+}
