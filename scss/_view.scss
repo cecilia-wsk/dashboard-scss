@@ -1,11 +1,11 @@
 // Google font
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 // Styles
 body {
   font-family: $font-stack;
   font-weight: $regular;
   font-size: 1em;
-  background: $background;
+  background: $background-main;
   color: $color-primary;
 }
 header {
@@ -14,6 +14,7 @@ header {
 	grid-template-rows: 1fr;
 }
 main {
+	position: relative;
 	width: 90%;
-	margin: auto;
+	margin: 1em auto 6em;
 }

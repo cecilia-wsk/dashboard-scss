@@ -1,19 +1,63 @@
 // Sidebar navigation
+// Hidden on mobile
 .sidebar-nav__menu-desktop {
 	display: none;
+	position: absolute;
+	left: 0;
+	// Visible on desktop
+	@media screen and (min-width: $breakpoint-med) {
+		display: block;
+	}
 }
 // Menu mobile 
+// Visible on mobile
 .sidebar-nav__menu-mobile {
 	padding-right: .5em;
+	// Hidden on desktop
+	@media screen and (min-width: $breakpoint-med) {
+		display: none;
+	}
 }
 // Header > logo
 .header__logo-container {
 	background: $background-logo;
 	color: white;
 }
+// Card items container
+.card__item--container {
+	@media screen and (min-width: $breakpoint-med) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 2em;
+	}
+}
 // Topbar navigation
 .nav__topbar-nav {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+// Card item task
+.card__item {
+	position: relative;
+	background: $background-card;
+	border-radius: 5px;
+	overflow:hidden; 
+	margin-bottom: 1.5em;
+    padding: 1em;
+    @include box-shadow(0px 8px 30px 0px rgba(0,0,0,0.2));
+}
+// Task item
+.task__item {
+	background: white;
+	border-radius: 8px;
+	margin-bottom: 1.5em;
+    padding: 1em;
+}
+// Task footer
+.task__footer {
+    display: grid;
+	grid-template-columns: 40px 40px auto 40px;
 	grid-template-rows: 1fr;
 }

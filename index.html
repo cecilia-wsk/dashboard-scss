@@ -86,112 +86,122 @@
         <!-- main doc -->
         <main class="main__tasks" role="main">
             <h1 class="main__title">Tasks</h1>
-            <!-- first card :: Backglog -->
-            <article class="card__item">
-                <div class="card__item-border-top gradient-primary"></div>
-                <h2>Backlog</h2>
-                <section class="task__item">
-                    <span class="task__badge gradient-primary">Priority</span>
-                    <h3>Company website redesign.</h3>
-                    <footer class="task__footer">
-                        <div class="task__footer__comments" aria-label="comments counter">
-                            <i class="fas fa-comment-dots" aria-hidden="true"></i>
-                            <span class="counter">1</span>
-                        </div>
-                        <div class="task__footer__attachment" aria-label="attached files counter">
-                            <i class="fas fa-paperclip" aria-hidden="true"></i>
-                            <span class="counter">2</span>
-                        </div>
-                        <div class="task__footer__user gradient-primary" aria-label="icon user task">
-                            <i class="fas fa-user" aria-hidden="true"></i>
-                        </div>
-                    </footer>
-                </section>
-                <button class="card__item--addtask" type="button" aria-label="add backlogged task">
-                    Add task
-                    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-                </button>
-            </article>
-            <!-- second card :: In progress -->
-            <article class="card__item">
-                <div class="card__item-border-top gradient-secondary"></div>
-                <h2>In Progress</h2>
-                <section class="task__item">
-                    <span class="task__badge gradient-secondary">Priority</span>
-                    <h3>Company website redesign.</h3>
-                    <footer class="task__footer">
-                        <div class="task__footer__comments" aria-label="comments counter">
-                            <i class="fas fa-comment-dots" aria-hidden="true"></i>
-                            <span class="counter">3</span>
-                        </div>
-                        <div class="task__footer__attachment" aria-label="attached files counter">
-                            <i class="fas fa-paperclip" aria-hidden="true"></i>
-                            <span class="counter">2</span>
-                        </div>
-                        <div class="task__footer__user gradient-secondary" aria-label="icon user task">
-                            <i class="fas fa-user" aria-hidden="true"></i>
-                        </div>
-                    </footer>
-                </section>
-                <button class="card__item--addtask" type="button" aria-label="add in-progress task">
-                    Add task
-                    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-                </button>
-            </article>
-            <!-- third card :: Review -->
-            <article class="card__item">
-                <div class="card__item-border-top gradient-tertiary"></div>
-                <h2>Review</h2>
-                <section class="task__item">
-                    <span class="task__badge gradient-tertiary">Priority</span>
-                    <h3>Company website redesign.</h3>
-                    <footer class="task__footer">
-                        <div class="task__footer__comments" aria-label="comments counter">
-                            <i class="fas fa-comment-dots" aria-hidden="true"></i>
-                            <span class="counter">2</span>
-                        </div>
-                        <div class="task__footer__attachment" aria-label="attached files counter">
-                            <i class="fas fa-paperclip" aria-hidden="true"></i>
-                            <span class="counter">2</span>
-                        </div>
-                        <div class="task__footer__user gradient-tertiary" aria-label="icon user task">
-                            <i class="fas fa-user" aria-hidden="true"></i>
-                        </div>
-                    </footer>
-                </section>
-                <button class="card__item--addtask" type="button" aria-label="add reviewed task">
-                    Add task
-                    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-                </button>
-            </article>
-            <!-- fourth card :: Complete -->
-            <article class="card__item">
-                <div class="card__item-border-top gradient-quaternary"></div>
-                <h2>Complete</h2>
-                <section class="task__item">
-                    <span class="task__badge gradient-quaternary">Priority</span>
-                    <h3>Company website redesign.</h3>
-                    <footer class="task__footer">
-                        <div class="task__footer__comments" aria-label="comments counter">
-                            <i class="fas fa-comment-dots" aria-hidden="true"></i>
-                            <span class="counter">1</span>
-                        </div>
-                        <div class="task__footer__attachment" aria-label="attached files counter">
-                            <i class="fas fa-paperclip" aria-hidden="true"></i>
-                            <span class="counter">3</span>
-                        </div>
-                        <div class="task__footer__user gradient-quaternary" aria-label="icon user task">
-                            <i class="fas fa-user" aria-hidden="true"></i>
-                        </div>
-                    </footer>
-                </section>
-                <button class="card__item--addtask" type="button" aria-label="add complete task">
-                    Add task
-                    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-                </button>
-            </article>
+            <div class="card__item--container">
+              <!-- first card :: Backglog -->
+              <article class="card__item">
+                  <div class="card__item-border-top gradient-primary"></div>
+                  <h2 class="card__item__title">Backlog</h2>
+                  <section class="task__item">
+                      <span class="task__badge gradient-primary">Priority</span>
+                      <h3 class="task__item__title">Company website redesign.</h3>
+                      <footer class="task__footer">
+                          <div class="flex task__footer__comments" aria-label="comments counter">
+                              <i class="icon--gray fas fa-comment-dots" aria-hidden="true"></i>
+                              <span class="task__footer__counter">1</span>
+                          </div>
+                          <div class="flex task__footer__attachment" aria-label="attached files counter">
+                              <i class="icon--gray fas fa-paperclip" aria-hidden="true"></i>
+                              <span class="task__footer__counter">2</span>
+                          </div>
+                          <div class="flex task__footer__user gradient-primary" aria-label="icon user task">
+                              <i class="icon--white fas fa-user" aria-hidden="true"></i>
+                          </div>
+                      </footer>
+                  </section>
+                  <div class="card__item--add">
+                    <button class="card__item--addtask" type="button" aria-label="add backlogged task">
+                        Add task
+                        <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                    </button>
+                  </div>
+              </article>
+              <!-- second card :: In progress -->
+              <article class="card__item">
+                  <div class="card__item-border-top gradient-secondary"></div>
+                  <h2 class="card__item__title">In Progress</h2>
+                  <section class="task__item">
+                      <span class="task__badge gradient-secondary">Priority</span>
+                      <h3 class="task__item__title">Company website redesign.</h3>
+                      <footer class="task__footer">
+                          <div class="flex task__footer__comments" aria-label="comments counter">
+                              <i class="icon--gray fas fa-comment-dots" aria-hidden="true"></i>
+                              <span class="task__footer__counter">3</span>
+                          </div>
+                          <div class="flex task__footer__attachment" aria-label="attached files counter">
+                              <i class="icon--gray fas fa-paperclip" aria-hidden="true"></i>
+                              <span class="task__footer__counter">2</span>
+                          </div>
+                          <div class="flex task__footer__user gradient-secondary" aria-label="icon user task">
+                              <i class="icon--white fas fa-user" aria-hidden="true"></i>
+                          </div>
+                      </footer>
+                  </section>
+                  <div class="card__item--add">
+                    <button class="card__item--addtask" type="button" aria-label="add in-progress task">
+                        Add task
+                        <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                    </button>
+                  </div>
+              </article>
+              <!-- third card :: Review -->
+              <article class="card__item">
+                  <div class="card__item-border-top gradient-tertiary"></div>
+                  <h2 class="card__item__title">Review</h2>
+                  <section class="task__item">
+                      <span class="task__badge gradient-tertiary">Priority</span>
+                      <h3 class="task__item__title">Company website redesign.</h3>
+                      <footer class="task__footer">
+                          <div class="flex task__footer__comments" aria-label="comments counter">
+                              <i class="icon--gray fas fa-comment-dots" aria-hidden="true"></i>
+                              <span class="task__footer__counter">2</span>
+                          </div>
+                          <div class="flex task__footer__attachment" aria-label="attached files counter">
+                              <i class="icon--gray fas fa-paperclip" aria-hidden="true"></i>
+                              <span class="task__footer__counter">2</span>
+                          </div>
+                          <div class="flex task__footer__user gradient-tertiary" aria-label="icon user task">
+                              <i class="icon--white fas fa-user" aria-hidden="true"></i>
+                          </div>
+                      </footer>
+                  </section>
+                  <div class="card__item--add">
+                    <button class="card__item--addtask" type="button" aria-label="add reviewed task">
+                        Add task
+                        <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                    </button>
+                  </div>
+              </article>
+              <!-- fourth card :: Complete -->
+              <article class="card__item">
+                  <div class="card__item-border-top gradient-quaternary"></div>
+                  <h2 class="card__item__title">Complete</h2>
+                  <section class="task__item">
+                      <span class="task__badge gradient-quaternary">Priority</span>
+                      <h3 class="task__item__title">Company website redesign.</h3>
+                      <footer class="task__footer">
+                          <div class="flex task__footer__comments" aria-label="comments counter">
+                              <i class="icon--gray fas fa-comment-dots" aria-hidden="true"></i>
+                              <span class="task__footer__counter">1</span>
+                          </div>
+                          <div class="flex task__footer__attachment" aria-label="attached files counter">
+                              <i class="icon--gray fas fa-paperclip" aria-hidden="true"></i>
+                              <span class="task__footer__counter">3</span>
+                          </div>
+                          <div class="flex task__footer__user gradient-quaternary" aria-label="icon user task">
+                              <i class="icon--white fas fa-user" aria-hidden="true"></i>
+                          </div>
+                      </footer>
+                  </section>
+                  <div class="card__item--add">
+                    <button class="card__item--addtask" type="button" aria-label="add complete task">
+                        Add task
+                        <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                    </button>
+                  </div>
+              </article>
+            </div>
             <button class="main__addcard" type="button" aria-label="add card for task">
-                <i class="fas fa-plus-circle" aria-hidden="true"></i>
+              <span class="main__addcard-icon">+</span>
             </button>
         </main>
     </div>

@@ -1,14 +1,15 @@
 // Variables
 $font-stack: Roboto, sans-serif;
 // Font weights
+$light: 300;
 $regular: 400;
 $semi-bold: 500;
-$bold: 700;
 // Colors
 $color-primary: #707090;
-$background: #eef2f9;
+$color-task: #9495ac;
+$background-main: #eef2f9;
 $background-logo: #7f91db;
+$background-card: #f6f8fc;
 // Breakpoints
-$breakpoint-small: 600;
-$breakpoint-med-small: 960;
-$breakpoint-med: 1175;
+$breakpoint-small: 600px;
+$breakpoint-med: 960px;
