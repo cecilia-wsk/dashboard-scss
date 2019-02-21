@@ -39,7 +39,8 @@
 	}
 }
 .form__search-input {
-	padding-left: 10px;
+	padding: 15px 10px;
+    color: white;
 }
 @include placeholder {
 	font-weight: $light;
@@ -103,6 +104,7 @@
 // Task-item title
 .task__item__title {
 	font-weight: $regular;
+	font-size: 1em;
 }
 // Task-footer user
 .task__footer__user {
@@ -141,4 +143,6 @@
 .main__addcard-icon {
 	color: white;
 	font-size: 2em;
+    margin-top: -3px;
+    display: block;
 }

@@ -2,8 +2,12 @@
 // Hidden on mobile
 .sidebar-nav__menu-desktop {
 	display: none;
-	position: absolute;
-	left: 0;
+    position: fixed;
+    left: 0;
+    width: 10%;
+    padding: 0;
+    height: 100%;
+    background: white;
 	// Visible on desktop
 	@media screen and (min-width: $breakpoint-med) {
 		display: block;
