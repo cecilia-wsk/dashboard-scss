@@ -38,9 +38,12 @@
 		display: block;
 	}
 }
-// Topbar navigation panel
-.topbar-nav__panel {
-    padding: 1em;
+.form__search-input {
+	padding-left: 10px;
+}
+@include placeholder {
+	font-weight: $light;
+    color: white;
 }
 .topbar-nav__panel--notif {
 	position: relative;
@@ -56,6 +59,11 @@
     background: #a1ffff;
     top: 25%;
     right: 28%;
+}
+.topbar-nav__username {
+	font-weight: $light;
+	color: white;
+	padding-right: 1.5em;
 }
 // Usericon
 .topbar-nav__usericon {
@@ -122,9 +130,9 @@
 // Main add 
 .main__addcard {
 	@include box-shadow(0px 8px 30px 0px rgba(0,0,0,0.2));
-	position: absolute;
-    bottom: -3%;
-    right: 1%;
+	position: fixed;
+    bottom: 4%;
+    right: 5%;
 	background: $color-task;
 	width: 70px;
 	height: 70px;

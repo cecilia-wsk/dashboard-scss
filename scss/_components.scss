@@ -23,6 +23,16 @@
 	background: $background-logo;
 	color: white;
 }
+// Topbar navigation panel
+.topbar-nav__panel {
+    padding: 1em;
+    position: relative;
+}
+// Form search
+.form__search {
+	position: absolute;
+    left: 2em;
+}
 // Card items container
 .card__item--container {
 	@media screen and (min-width: $breakpoint-med) {
@@ -37,6 +47,9 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
+	@media screen and (min-width: $breakpoint-med) {
+		grid-template-columns: 70% 10% 20%;
+	}
 }
 // Card item task
 .card__item {
