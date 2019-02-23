@@ -74,6 +74,21 @@
     border: none;
     border-radius: 50%;
 }
+// Sidebar nav link
+.sidebar-nav__link, 
+.sidebar-nav__title {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+// Sidebar nav icon
+.sidebar-nav__icon {
+	font-size: 1.3em;
+	margin-bottom: 5px;
+}
+.nav__item-current .sidebar-nav__icon {
+	@include text-gradient(top, #9da7fb, #6eb4f8);
+}
 // Main title
 .main__title {
 	font-weight: $regular;
@@ -104,7 +119,7 @@
 // Task-item title
 .task__item__title {
 	font-weight: $regular;
-	font-size: 1em;
+	font-size: .93em;
 }
 // Task-footer user
 .task__footer__user {
@@ -135,7 +150,7 @@
 	position: fixed;
     bottom: 4%;
     right: 5%;
-	background: $color-task;
+	background: $color-primary;
 	width: 70px;
 	height: 70px;
 	border-radius: 50%;

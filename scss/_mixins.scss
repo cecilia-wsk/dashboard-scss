@@ -9,21 +9,33 @@
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
 }
-@mixin linear-gradient($angle, $gradient1, $gradient2) {
-  background-color: $gradient2; 
+@mixin linear-gradient($angle, $from, $to) {
+  background-color: $to; 
   /* fallback color */
-  background-image: -webkit-gradient(linear, $angle, from($gradient1), to($gradient2)); 
+  background-image: -webkit-gradient(linear, $angle, from($from), to($to)); 
   /* saf4+, chrome */
-  background-image: -webkit-linear-gradient($angle, $gradient1, $gradient2); 
+  background-image: -webkit-linear-gradient($angle, $from, $to); 
   /* chrome 10+, saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient($angle, $gradient1, $gradient2); 
+  background-image: -moz-linear-gradient($angle, $from, $to); 
   /* FF3.6 */
-  background-image: -ms-linear-gradient($angle, $gradient1, $gradient2); 
+  background-image: -ms-linear-gradient($angle, $from, $to); 
   /* IE10 */
-  background-image: -o-linear-gradient($angle, $gradient1, $gradient2); 
+  background-image: -o-linear-gradient($angle, $from, $to); 
   /* Opera 11.10+ */
-  background-image: linear-gradient($angle, $gradient1, $gradient2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$gradient1}', EndColorStr='#{$gradient2}');
+  background-image: linear-gradient($angle, $from, $to);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$from}', EndColorStr='#{$to}');
+}
+@mixin text-gradient($angle, $from, $to) {
+  background: -webkit-linear-gradient($angle, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin border-gradient($dir, $from, $to, $width) {
+  border-left: $width solid $from;
+  background-size: 100% $width;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
 }
 // animation
 @mixin transition($value) {
